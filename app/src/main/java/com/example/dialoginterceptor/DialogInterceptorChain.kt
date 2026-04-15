@@ -15,7 +15,7 @@ class DialogInterceptorChain(private val context: Context) : Chain {
     private var isDialogShowing = false
 
     fun addInterceptor(interceptor: DialogInterceptor) {
-        interceptors.add(interceptor)
+        interceptors.offer(interceptor)
         proceed()
     }
 
